@@ -4,13 +4,14 @@ import './App.css';
 
 // import ReactGroupedBar from 'views/groupedBar/ReactGroupedBar';
 // import Map from 'views/Map';
-import StyledAxes from 'views/StyledAxes';
+// import StyledAxes from 'views/StyledAxes';
+import MultiLineChart from 'views/MultiLineChart';
 
 function App() {
   return (
     <div>
       {/* <Map /> */}
-      <StyledAxes />
+      <MultiLineChart />
     </div>
   );
 }

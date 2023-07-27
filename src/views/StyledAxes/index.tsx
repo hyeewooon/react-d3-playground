@@ -30,10 +30,12 @@ const StyledAxes = () => {
 
     const timeFormat = utcFormat('%b %d');
 
+    const xScale = x.ticks(utcMonth).map(timeFormat);
+
     svgElem
       .append('g')
       .attr('transform', `translate(0, ${size.height - size.marginBottom})`)
-      .call(axisBottom(x).ticks(utcMonth.every(3)))
+      .call(axisBottom(x))
       .call((g) => g.select('.domain').remove());
 
     svgElem
