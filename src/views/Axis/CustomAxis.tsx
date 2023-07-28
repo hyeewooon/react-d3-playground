@@ -15,27 +15,33 @@ const CustomAxis: React.FC<Settings> = ({
     <g>
       <path
         d={['M', range[0], height, 'H', range[1]].join(' ')}
-        stroke="black"
+        stroke="#EDEDED"
       />
 
-      {list.map((value, index) => (
-        <g
-          key={value}
-          transform={`translate(${groupWidth * (index + 1)}, ${height})`}
-          style={{ dominantBaseline: 'middle' }}
-        >
-          <line y1={0} y2={6} stroke="black" />
-          <text
-            style={{
-              fontSize: '10px',
-              textAnchor: 'middle',
-              transform: 'translateY(14px)',
-            }}
+      <g transform={`translate(${range[0]}, 0)`}>
+        {list.map((value, index) => (
+          <g
+            key={value}
+            transform={`translate(${
+              groupWidth * (index + 1) - groupWidth / 2
+            }, ${height})`}
+            style={{ dominantBaseline: 'middle' }}
           >
-            {value}
-          </text>
-        </g>
-      ))}
+            {/* <line y1={0} y2={6} stroke="black" /> */}
+            <text
+              style={{
+                fontSize: '14px',
+                fontWeight: '400',
+                textAnchor: 'middle',
+                transform: 'translateY(14px)',
+                fill: '#656565',
+              }}
+            >
+              {value}
+            </text>
+          </g>
+        ))}
+      </g>
     </g>
   );
 };
