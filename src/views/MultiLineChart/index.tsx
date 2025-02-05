@@ -6,7 +6,7 @@ import { extent, range } from 'd3-array';
 import { timeMonth, timeYear, utcMonth } from 'd3-time';
 import { timeFormat, utcFormat } from 'd3-time-format';
 
-import CustomAxis from 'views/Axis/CustomAxis';
+import CustomAxis from '@views/Axis/CustomAxis';
 
 interface DataType {
   date: string;

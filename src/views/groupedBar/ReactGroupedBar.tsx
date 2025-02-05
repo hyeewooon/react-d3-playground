@@ -2,8 +2,8 @@ import { useMemo } from 'react';
 import { scaleOrdinal, scaleLinear, scaleBand } from 'd3-scale';
 import { max, group } from 'd3-array';
 
-import RangeAxis from 'views/Axis/RangeAxis';
-import CustomAxis from 'views/Axis/CustomAxis';
+import RangeAxis from '@views/Axis/RangeAxis';
+import CustomAxis from '@views/Axis/CustomAxis';
 
 interface DataType {
   date: string;

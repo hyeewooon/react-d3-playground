@@ -2,6 +2,7 @@
   "name": "react-d3-playground",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@react-spring/web": "^9.7.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,7 +23,6 @@
     "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
     "topojson-client": "^3.1.0",
     "typescript": "^5.1.6",
     "uuid": "^9.0.0",
@@ -47,13 +47,14 @@
     "@types/react-dom": "^18.2.7",
     "@types/topojson-client": "^3.1.1",
     "@types/topojson-specification": "^1.0.2",
-    "@types/uuid": "^9.0.2"
+    "@types/uuid": "^9.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "tsc & vite build",
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": [
